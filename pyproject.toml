@@ -5,22 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "albumentations>=2.0.2",
-    "datasets==4.0.0",
-    "evaluate>=0.4.5",
-    "ftfy>=6.3.1",
-    "lightning>=2.5.3",
-    "onnxruntime-gpu>=1.23.0",
-    "opencv-python>=4.10.0.84",
-    "optimum-onnx[onnxruntime]>=0.0.1",
-    "pillow>=11.1.0",
-    "rapidfuzz>=3.13.0",
-    "rich>=10.2.2",
-    "tensorboard>=2.20.0",
-    "torch==2.7.0",
-    "torchvision>=0.20.1",
-    "transformers==4.40.0",
-    "wand>=0.6.13",
+    "albumentations",
+    "torch",
+    "torchvision",
+    "transformers",
+    "omegaconf",
+    "hydra-core",
 ]
 
 [dependency-groups]
@@ -57,3 +47,23 @@ packages = ["src/texo"]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[project.optional-dependencies]
+all = [
+    "albumentations>=2.0.2",
+    "datasets==4.0.0",
+    "evaluate>=0.4.5",
+    "ftfy>=6.3.1",
+    "lightning>=2.5.3",
+    "onnxruntime-gpu>=1.23.0",
+    "opencv-python>=4.10.0.84",
+    "optimum-onnx[onnxruntime]>=0.0.1",
+    "pillow>=11.1.0",
+    "rapidfuzz>=3.13.0",
+    "rich>=10.2.2",
+    "tensorboard>=2.20.0",
+    "torch==2.7.0",
+    "torchvision>=0.20.1",
+    "transformers==4.40.0",
+    "wand>=0.6.13",
+]
